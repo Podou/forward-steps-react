@@ -16,14 +16,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx|ts|js|jsx?$/,
+        test: /\.tsx|ts?$/,
         exclude: [/node_modules/, /\.md/, /\.txt/, /\.map/],
         use: ['awesome-typescript-loader'],
       },
       {
-        test: /\.js$/,
-        enforce: 'pre',
-        loader: 'source-map-loader',
+        test: /\.js|jsx?$/,
+        exclude: [/node_modules/, /\.md/, /\.txt/, /\.map/],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['react', 'env']
+          }
+        }
       },
       {
         test: /\.(sass|less)$/,

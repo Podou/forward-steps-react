@@ -1,5 +1,6 @@
 
 import * as antd from 'antd'
+import 'antd/dist/antd.css'
 
 const Affix = antd.Affix
 const Anchor = antd.Anchor
