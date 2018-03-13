@@ -9,5 +9,5 @@ const Example = () => {
 }
 
 export default (story) => {
-  story.add('A10Chart', Example)
+  story.add('Animation', Example)
 }
