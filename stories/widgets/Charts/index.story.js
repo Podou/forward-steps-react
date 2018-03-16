@@ -3,12 +3,22 @@ import * as React from 'react'
 import highcharts from 'highcharts'
 import ReactHighmap from 'react-highcharts/ReactHighmaps'
 
+import WorldMap from './ControlMap'
 
-import { worldMapData } from './worldMapData'
+
+import worldMapData from './worldMapData'
 import { europeMapData } from './europeMapData'
 
 console.log(worldMapData)
 console.log(europeMapData)
+
+const data = []
+europeMapData.features.map((feature, index) => {
+  data.push({
+    key: feature.properties['hc-key'],
+    value: index
+  })
+})
 
 const mapConfig = {
   chart: {
@@ -57,7 +67,9 @@ const mapConfig = {
 
 const Example = () => {
   return (
-    <ReactHighmap config={mapConfig} />
+    <div className="container">
+      <WorldMap />
+    </div>
   )
 }
 
