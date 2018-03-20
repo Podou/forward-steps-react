@@ -69,6 +69,10 @@ module.exports = {
         test: /\.txt$/,
         use: 'raw-loader',
       },
+      {
+        test: /\.json$/,
+        use: 'json-loader',
+      },
     ],
   },
   resolve: {

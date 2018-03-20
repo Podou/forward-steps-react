@@ -1,6 +1,7 @@
 
 import * as antd from 'antd'
 import 'antd/dist/antd.css'
+import './styles/font/index.less'
 
 const Affix = antd.Affix
 const Anchor = antd.Anchor
