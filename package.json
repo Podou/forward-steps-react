@@ -21,7 +21,7 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "storybook": "start-storybook -p 9006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.14",
