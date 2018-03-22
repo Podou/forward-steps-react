@@ -1,6 +1,7 @@
 const path = require('path')
 var webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const srcPath = path.join(__dirname, 'src')
 const distPath = path.join(__dirname, 'dist')
@@ -69,6 +70,7 @@ module.exports = {
   },
   externals: {},
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({
       filename: 'widgets.bundle.css',
