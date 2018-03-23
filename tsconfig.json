@@ -1,49 +1,29 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "commonjs",
-    "target": "es6",
-    "jsx": "react",
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
     "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noImplicitAny": true,
-    "allowJs": false,
-    "declaration": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "alwaysStrict": false,
-    "lib": [
-      "dom",
-      "es2015",
-      "es2016",
-      "es2017",
-      "esnext"
-    ],
-    "baseUrl": ".",
-    "rootDirs": [
-      "src",
-    ]
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true
   },
-  "awesomeTypescriptLoaderOptions": {
-    // "useCache": true,
-
-    "useBabel": true,
-    "babelOptions": {
-      "babelrc": false,
-    },
-    "forkChecker": true,
-    "useWebpackText": true,
-    "transpileOnly": true
-  },
-  "include": [
-    "src/**/*",
-    // "stories/**/*"
-  ],
   "exclude": [
-    "node_modules/",
-    "src/alphagen",
-    "**/__tests__/*",
-    "dist/"
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
   ]
 }
